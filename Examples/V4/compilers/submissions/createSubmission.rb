@@ -13,7 +13,7 @@ submission_data = {
 };
 
 # send request
-uri = URI.parse("http://" + endpoint + "/api/v4/submissions?access_token=" + access_token)
+uri = URI.parse("https://" + endpoint + "/api/v4/submissions?access_token=" + access_token)
 http = Net::HTTP.new(uri.host, uri.port)
 
 request = Net::HTTP::Post.new(uri.request_uri);

@@ -8,13 +8,13 @@ access_token = "<access_token>"
 
 # define request parameters
 submission_data = {
-    "problemCode" => 'EXAMPLE',
+    "problemId" => "42",
     "compilerId" => "11",
     "source" => '<source_code>'
 };
 
 # send request
-uri = URI.parse("http://" + endpoint + "/api/v4/submissions?access_token=" + access_token)
+uri = URI.parse("https://" + endpoint + "/api/v4/submissions?access_token=" + access_token)
 http = Net::HTTP.new(uri.host, uri.port)
 
 request = Net::HTTP::Post.new(uri.request_uri);

@@ -10,7 +10,7 @@ access_token = "<access_token>"
 submission_id = "2017"
 
 # send request
-uri = URI.parse("http://" + endpoint + "/api/v4/submissions/" + submission_id + "?access_token=" + access_token)
+uri = URI.parse("https://" + endpoint + "/api/v4/submissions/" + submission_id + "?access_token=" + access_token)
 http = Net::HTTP.new(uri.host, uri.port)
 
 begin
