@@ -7,7 +7,7 @@ endpoint = "<endpoint>"
 access_token = "<access_token>"
 
 # send request
-uri = URI.parse("http://" + endpoint + "/api/v3/test?access_token=" + access_token)
+uri = URI.parse("https://" + endpoint + "/api/v3/test?access_token=" + access_token)
 http = Net::HTTP.new(uri.host, uri.port)
 
 begin
