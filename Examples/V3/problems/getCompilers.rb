@@ -11,15 +11,15 @@ uri = URI.parse("https://" + endpoint + "/api/v3/compilers?access_token=" + acce
 http = Net::HTTP.new(uri.host, uri.port)
 
 begin
-  response = http.request(Net::HTTP::Get.new(uri.request_uri))
+    response = http.request(Net::HTTP::Get.new(uri.request_uri))
 
-  # process response
-  case response
-      when Net::HTTPSuccess
-          puts JSON.parse(response.body)
-      when Net::HTTPUnauthorized
-          puts "Invalid access token"
-  end
+    # process response
+    case response
+        when Net::HTTPSuccess
+            puts JSON.parse(response.body)
+        when Net::HTTPUnauthorized
+            puts "Invalid access token"
+    end
 rescue => e
     puts "Connection error"
 end
